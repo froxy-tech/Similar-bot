@@ -20,8 +20,8 @@ const PROTECTED_NUMBERS = new Set(
     .map(digitsOnly)
     .filter(Boolean),
 );
-const AUTH_DIR = process.env.AUTH_DIR || path.join(__dirname, 'auth_info_baileys');
-const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '.data');
+const AUTH_DIR = process.env.AUTH_DIR || '/tmp/froxy-auth';
+const DATA_DIR = process.env.DATA_DIR || '/tmp/froxy-data';
 const STATE_PATH = path.join(DATA_DIR, 'state.json');
 const PAIRING_NUMBER = digitsOnly(process.env.PAIRING_NUMBER || '');
 const startedAt = Date.now();
