@@ -1,0 +1,9 @@
+# Hostless app configuration. The app exposes /health on PORT while the bot stays connected.
+build:
+  system: auto
+  command: "npm install"
+start_command: "npm start"
+health_check:
+  type: http
+  http_path: "/health"
+  interval_in_seconds: 30
